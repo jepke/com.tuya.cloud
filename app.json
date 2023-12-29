@@ -1090,6 +1090,42 @@
     },
     {
       "images": {
+        "large": "/drivers/humidifier/assets/images/large.png",
+        "small": "/drivers/humidifier/assets/images/small.png"
+      },
+      "icon": "/drivers/humidifier/assets/icon.svg",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "humidifier"
+      },
+      "class": "other",
+      "capabilities": [
+        "measure_humidity",
+        "measure_temperature",
+        "onoff"
+      ],
+      "id": "humidifier"
+    },
+    {
+      "images": {
         "large": "/drivers/light/assets/images/large.png",
         "small": "/drivers/light/assets/images/small.png"
       },

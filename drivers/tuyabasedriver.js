@@ -33,6 +33,10 @@ class TuyaBaseDriver extends Homey.Driver {
             "category": ['cs']
         },
         {
+            "type": "humidifier",
+            "category": ['jsq']
+        },
+        {
             "type": "fan",
             "category": ['fs', 'fskg']
         },

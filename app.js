@@ -209,6 +209,8 @@ class TuyaCloudApp extends Homey.App {
                 break;
             case 'dehumidifier':
                 return this.homey.drivers.getDriver('dehumidifier');
+            case 'humidifier':
+                return this.homey.drivers.getDriver('humidifier');
             case 'fan':
                 break;
             case 'smokeSensor':

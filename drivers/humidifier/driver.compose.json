@@ -1,0 +1,12 @@
+{
+  "name": {
+    "en": "humidifier"
+  },
+  "class": "other",
+  "capabilities": [
+    "measure_humidity",
+    "measure_temperature",
+    "onoff"
+  ],
+  "$extends": [ "defaults" ]
+}
