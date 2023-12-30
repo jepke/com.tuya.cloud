@@ -1,8 +1,8 @@
 {
   "name": {
-    "en": "humidifier"
+    "en": "Humidifier"
   },
-  "class": "other",
+  "class": "thermostat",
   "capabilities": [
     "measure_humidity",
     "measure_temperature",

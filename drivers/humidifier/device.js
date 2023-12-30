@@ -43,6 +43,12 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
                 case 'switch':
                     this.normalAsync('onoff', status.value);
                     break;
+                case 'humidity_current':
+                    this.normalAsync('measure_humidity', status.value);
+                    break;
+                case 'temp_current':
+                    this.normalAsync('measure_temperature', status.value);
+                    break;
             }
         });
     }
