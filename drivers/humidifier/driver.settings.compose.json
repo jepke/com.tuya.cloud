@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sound",
+    "type": "checkbox",
+    "label": { "en": "Sound"},
+    "value": false
+  },
+  {
+    "id": "temp_unit_convert",
+    "type": "dropdown",
+    "label": { "en": "Temperature unit"},
+    "values": [
+        {
+          "id": "c",
+          "label": { "en": "Celsius"}
+        },
+        {
+          "id": "f",
+          "label": { "en": "Fahrenheit"}
+        }
+    ]
+  },
+  {
+    "id": "countdown_set",
+    "type": "dropdown",
+    "label": { "en": "Timer" },
+    "values": [
+      {
+        "id": "cancel",
+        "label": { "en": "No timer"}
+      },
+      {
+        "id": "1h",
+        "label": { "en": "1 hour timer"}
+      },
+      {
+        "id": "2h",
+        "label": { "en": "2 hour timer"}
+      },
+      {
+        "id": "3h",
+        "label": { "en": "3 hour timer"}
+      },
+      {
+        "id": "4h",
+        "label": { "en": "4 hour timer"}
+      },
+      {
+        "id": "5h",
+        "label": { "en": "5 hour timer"}
+      },
+      {
+        "id": "6h",
+        "label": { "en": "6 hour timer"}
+      },
+      {
+        "id": "7h",
+        "label": { "en": "7 hour timer"}
+      },
+      {
+        "id": "8h",
+        "label": { "en": "8 hour timer"}
+      },
+      {
+        "id": "9h",
+        "label": { "en": "9 hour timer"}
+      },
+      {
+        "id": "10h",
+        "label": { "en": "10 hour timer"}
+      },
+      {
+        "id": "11h",
+        "label": { "en": "11 hour timer"}
+      },
+      {
+        "id": "12h",
+        "label": { "en": "12 hour timer"}
+      }
+    ]
+  }
+]

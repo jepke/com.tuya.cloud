@@ -1,0 +1,16 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Target Humidity"
+    },
+    "desc": {
+      "en": "Target Humidity"
+    },
+    "getable": true,
+    "setable": true,
+    "units": "%",
+    "uiComponent": "slider",
+    "min": 30,
+    "max": 75,
+    "step": 5
+}
