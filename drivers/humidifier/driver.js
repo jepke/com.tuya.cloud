@@ -41,6 +41,10 @@ class TuyaHumidifierDriver extends TuyaBaseDriver {
                             case "switch":
                                 capabilities.push("onoff");
                                 break;
+                            case "humidity_set":
+                                values = JSON.parse(tuyaDevice.functions[i].values);
+                                capabilities.push("humidifier_target_humidity");
+                                break;
                             default:
                                 break;
                         }

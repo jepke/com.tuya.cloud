@@ -23,6 +23,9 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
             if (valueObj.onoff != null) {
                 this.set_on_off(valueObj.onoff === true || valueObj.onoff === 1);
             }
+            if (valueObj.dehumidifier_target_humidity != null) {
+              this.set_humidifier_target_humidity(valueObj.humidifier_target_humidity);
+            }
         } catch (ex) {
             this.homey.app.logToHomey(ex);
         }
@@ -42,6 +45,9 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
             switch (status.code) {
                 case 'switch':
                     this.normalAsync('onoff', status.value);
+                    break;
+                case 'humidify_set':
+                    this.normalAsync('humidifier_target_humidity', status.value);
                     break;
                 case 'humidity_current':
                     this.normalAsync('measure_humidity', status.value);
@@ -76,6 +82,9 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
 
     set_on_off(onoff) {
         this.sendCommand("switch", onoff);
+    }
+    set_humidifier_target_humidity(targetHumidity) {
+        this.sendCommand("humidify_set", targetHumidity);
     }
 }
 
