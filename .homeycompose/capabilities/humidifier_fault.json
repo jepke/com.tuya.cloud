@@ -1,0 +1,28 @@
+{
+    "type": "enum",
+    "title": {
+      "en": "Fault"
+    },
+    "desc": {
+      "en": "Humidifier fault"
+    },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/error.svg",
+    "values": [
+      {
+        "id": "0",
+        "title": {
+          "en": "OK"
+        }
+      },
+      {
+        "id": "1",
+        "title": {
+          "en": "Empty reservoir"
+        }
+      }
+    ]
+  }
+  

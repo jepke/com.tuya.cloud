@@ -1,0 +1,39 @@
+{
+    "type": "enum",
+    "title": {
+      "en": "Humidifier level"
+    },
+    "desc": {
+      "en": "Humidifier level"
+    },
+    "getable": true,
+    "setable": true,
+    "uiComponent": "picker",
+    "values": [
+      {
+        "id": "auto",
+        "title": {
+          "en": "Auto mist level"
+        }
+      },
+      {
+        "id": "level1",
+        "title": {
+          "en": "Level 1 mist"
+        }
+      },
+      {
+        "id": "level2",
+        "title": {
+          "en": "Level 2 mist"
+        }
+      },
+      {
+        "id": "level3",
+        "title": {
+          "en": "Level 2 mist"
+        }
+      }
+    ]
+  }
+  

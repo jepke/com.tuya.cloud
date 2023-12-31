@@ -29,6 +29,9 @@ class TuyaHumidifierDriver extends TuyaBaseDriver {
                             case "humidity_current":
                                 capabilities.push("measure_humidity");
                                 break;
+                            case "fault":
+                                capabilities.push("humidifier_fault");
+                                break;
                             default:
                                 break;
                         }
@@ -44,6 +47,10 @@ class TuyaHumidifierDriver extends TuyaBaseDriver {
                             case "humidity_set":
                                 values = JSON.parse(tuyaDevice.functions[i].values);
                                 capabilities.push("humidifier_target_humidity");
+                                break;
+                            case "level":
+                                values = JSON.parse(tuyaDevice.functions[i].values);
+                                capabilities.push("humidifier_level");
                                 break;
                             default:
                                 break;

@@ -23,8 +23,11 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
             if (valueObj.onoff != null) {
                 this.set_on_off(valueObj.onoff === true || valueObj.onoff === 1);
             }
-            if (valueObj.dehumidifier_target_humidity != null) {
+            if (valueObj.humidifier_target_humidity != null) {
               this.set_humidifier_target_humidity(valueObj.humidifier_target_humidity);
+            }
+            if (valueObj.humidifier_level != null) {
+              this.set_humidifier_level(valueObj.humidifier_level);
             }
         } catch (ex) {
             this.homey.app.logToHomey(ex);
@@ -49,11 +52,17 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
                 case 'humidify_set':
                     this.normalAsync('humidifier_target_humidity', status.value);
                     break;
+                case 'level':
+                    this.normalAsync('humidifier_level', status.value);
+                    break;
                 case 'humidity_current':
                     this.normalAsync('measure_humidity', status.value);
                     break;
                 case 'temp_current':
                     this.normalAsync('measure_temperature', status.value);
+                    break;
+                case 'fault':
+                    this.normalAsync('humidifier_fault', status.value);
                     break;
             }
         });
@@ -85,6 +94,9 @@ class TuyaHumidifierDevice extends TuyaBaseDevice {
     }
     set_humidifier_target_humidity(targetHumidity) {
         this.sendCommand("humidify_set", targetHumidity);
+    }
+    set_humidifier_level(targetHumidity) {
+        this.sendCommand("level", targetHumidity);
     }
 }
 
